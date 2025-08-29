@@ -27,7 +27,7 @@ class UserUpdate(BaseModel):
 class UserInDB(UserBase):
     id: int
     is_active: bool
-    created_at: datetimea
+    created_at: datetime
     is_saml_user: bool
     saml_subject_id: Optional[str] = None
     azure_role: Optional[str] = None
@@ -134,3 +134,4 @@ class Candidate(CandidateBase):
 # Update forward references
 User.model_rebuild()
 RoleWithPermissions.model_rebuild()
+
